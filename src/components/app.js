@@ -10,14 +10,13 @@ function searchWeather() {
   var http = new XMLHttpRequest();
   var apiKey = "";
   var url = "http://api.openweathermap.org/data/2.5/weather?q=" + cityName;
-  var method = 'GET';
-}
-  http.open(method, url);
-  http.onreadystatechange = function() {
-    if (http.readyState == XMLHttpRequest.DONE && http.status === 200)
+  var method = "GET";
 
-  } else if (http.readyState === XMLHttpRequest.DONE) {
-    alert('Something went wrong!')
-  }
-};
+  http.open(method, url);
+  http.onreadystatechange = function () {
+    if (http.readyState == XMLHttpRequest.DONE && http.status === 200) {
+    } else if (http.readyState === XMLHttpRequest.DONE) {
+      alert("Something went wrong!");
+    }
+  };
 }
